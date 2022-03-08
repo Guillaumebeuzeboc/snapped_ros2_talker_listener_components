@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(snapped_ros2_talker_listener_components)
+project(snapped_ros2_talker_component)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -23,16 +23,6 @@ find_package(std_msgs REQUIRED)
 
 include_directories(include)
 
-add_library(listener_component SHARED
-  src/listener.cpp)
-
-ament_target_dependencies(listener_component
-  "rclcpp"
-  "rclcpp_components"
-  "std_msgs")
-
-rclcpp_components_register_nodes(listener_component "snapped::Listener")
-
 add_library(talker_component SHARED
   src/talker.cpp)
 
@@ -45,7 +35,6 @@ rclcpp_components_register_nodes(talker_component "snapped::Talker")
 
 install(TARGETS
   talker_component
-  listener_component
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)

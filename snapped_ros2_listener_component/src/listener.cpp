@@ -1,4 +1,4 @@
-#include "snapped_ros2_talker_listener_components/listener.hpp"
+#include "snapped_ros2_listener_component/listener.hpp"
 
 namespace snapped {
 Listener::Listener(const rclcpp::NodeOptions &options)

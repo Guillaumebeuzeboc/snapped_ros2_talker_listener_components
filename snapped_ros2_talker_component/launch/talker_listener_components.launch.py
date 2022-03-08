@@ -11,11 +11,11 @@ def generate_launch_description():
             executable='component_container',
             composable_node_descriptions=[
                 ComposableNode(
-                    package='snapped_ros2_talker_listener_components',
+                    package='snapped_ros2_talker_component',
                     plugin='snapped::Talker',
                     name='talker'),
                 ComposableNode(
-                    package='snapped_ros2_talker_listener_components',
+                    package='snapped_ros2_listener_component',
                     plugin='snapped::Listener',
                     name='listener')
             ],

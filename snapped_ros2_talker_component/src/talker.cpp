@@ -1,4 +1,4 @@
-#include "snapped_ros2_talker_listener_components/talker.hpp"
+#include "snapped_ros2_talker_component/talker.hpp"
 
 #include <chrono>
 
